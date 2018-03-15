@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11854,18 +11854,16 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Using-AI-and-NLP-to-Improve-Your-Cooking">Using AI and NLP to Improve Your Cooking<a class="anchor-link" href="#Using-AI-and-NLP-to-Improve-Your-Cooking">&#182;</a></h1><p>Michael Humkey, Conor Marsten</p>
+<h1 id="Using-NLP-to-Improve-Your-Cooking">Using NLP to Improve Your Cooking<a class="anchor-link" href="#Using-NLP-to-Improve-Your-Cooking">&#182;</a></h1><p>Michael Humkey, Conor Marsten</p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11873,19 +11871,18 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Why?">Why?<a class="anchor-link" href="#Why?">&#182;</a></h3><p>Surely all cooking can be improved by a little constructive criticism. But how do we determine what is useful?
 This is something easy for a person to do.</p>
+<p><img src="http://eatslikeaduck.com/wp-content/uploads/2015/09/Homer%E2%80%99s-Breakfast-for-Mr.-Burns-Screenshot-3.png" alt=""></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11894,28 +11891,46 @@ This is something easy for a person to do.</p>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Building-the-Dataset">Building the Dataset<a class="anchor-link" href="#Building-the-Dataset">&#182;</a></h2>
+<h2 id="Background">Background<a class="anchor-link" href="#Background">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Restaurants use NLP to make improvements based on customer reviews.</p>
+<p>IBM chef watson will make a recipe when given up to four different food items.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Building-the-Dataset">Building the Dataset<a class="anchor-link" href="#Building-the-Dataset">&#182;</a></h2><p><img src="http://resources3.atgtickets.com/static/699_full.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>First we are using the food2fork api to search for a recipe. For simplicity’s sake we are just using the first element returned in the list of query results. This recipe consists of a source URL, a list of ingredients, a title, and a publisher name among a handful of other fields. Then we are using BeautifulSoup to load in the source URL and scrape each review from the web page.</p>
+<p><img src="https://singbookswithemily.files.wordpress.com/2015/03/beautiful-soup-can-w-mock-turtle-coin.jpg" alt=""></p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">urllib</span>
@@ -11929,7 +11944,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://food2fork.com/api/search?&quot;</span>
@@ -11946,7 +11961,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -11959,7 +11974,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -11973,7 +11988,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
@@ -11987,7 +12002,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getReviews</span><span class="p">(</span><span class="n">recipes</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -12094,19 +12109,19 @@ This is something easy for a person to do.</p>
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To keep bad data from being processed, we do a little bit of cleaning</p>
+<p>To keep bad data from being processed, we do a little bit of cleaning.</p>
+<p><img src="https://i2.wp.com/ghostpoint.com/wp-content/uploads/2016/07/BadData.jpg?fit=467%2C358" alt=""></p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviews</span><span class="p">,</span> <span class="n">recipe</span> <span class="o">=</span> <span class="n">getReviews</span><span class="p">(</span><span class="n">recipes</span><span class="p">)</span>    
@@ -12123,7 +12138,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -12139,7 +12154,9 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;dd class=&#34;comment-body&#34;&gt;
@@ -12154,32 +12171,27 @@ This is something easy for a person to do.</p>
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Checking-for-foods">Checking for foods<a class="anchor-link" href="#Checking-for-foods">&#182;</a></h2>
+<p>Now that we have all of our reviews it's time to process them.</p>
+
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="k">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>
-<span class="n">food</span> <span class="o">=</span> <span class="n">wn</span><span class="o">.</span><span class="n">synset</span><span class="p">(</span><span class="s1">&#39;food.n.02&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Checking-for-foods">Checking for foods<a class="anchor-link" href="#Checking-for-foods">&#182;</a></h2><p><img src="http://citynews.com.au/wp-content/uploads/2017/09/034A9230-e1506583883937-500x282.png" alt=""></p>
 
 </div>
 </div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">recipe</span><span class="p">[</span><span class="s1">&#39;publisher&#39;</span><span class="p">]</span>
@@ -12194,7 +12206,9 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[54]:</div>
+
+<div class="prompt output_prompt">Out[13]:</div>
+
 
 
 
@@ -12210,7 +12224,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">recipe</span>
@@ -12225,7 +12239,9 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[55]:</div>
+
+<div class="prompt output_prompt">Out[14]:</div>
+
 
 
 
@@ -12254,7 +12270,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
@@ -12273,7 +12289,9 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[(&#39;I&#39;, &#39;PRP&#39;), (&#39;HAVE&#39;, &#39;VBP&#39;), (&#39;to&#39;, &#39;TO&#39;), (&#39;make&#39;, &#39;VB&#39;), (&#39;this&#39;, &#39;DT&#39;), (&#39;for&#39;, &#39;IN&#39;), (&#39;my&#39;, &#39;PRP$&#39;), (&#39;husband&#39;, &#39;NN&#39;), (&#39;sometime&#39;, &#39;RB&#39;), (&#39;soon&#39;, &#39;RB&#39;), (&#39;.&#39;, &#39;.&#39;), (&#39;We&#39;, &#39;PRP&#39;), (&#34;&#39;re&#34;, &#39;VBP&#39;), (&#39;trying&#39;, &#39;VBG&#39;), (&#39;to&#39;, &#39;TO&#39;), (&#39;use&#39;, &#39;VB&#39;), (&#39;up&#39;, &#39;RP&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;last&#39;, &#39;JJ&#39;), (&#39;jalapenos&#39;, &#39;NN&#39;), (&#39;from&#39;, &#39;IN&#39;), (&#39;our&#39;, &#39;PRP$&#39;), (&#39;garden&#39;, &#39;NN&#39;), (&#39;this&#39;, &#39;DT&#39;), (&#39;year&#39;, &#39;NN&#39;), (&#39;-&#39;, &#39;:&#39;), (&#39;this&#39;, &#39;DT&#39;), (&#39;would&#39;, &#39;MD&#39;), (&#39;be&#39;, &#39;VB&#39;), (&#39;perfect&#39;, &#39;JJ&#39;), (&#39;!&#39;, &#39;.&#39;), (&#39;!&#39;, &#39;.&#39;), (&#39;!&#39;, &#39;.&#39;), (&#39;Yum&#39;, &#39;NN&#39;)]
@@ -12285,9 +12303,18 @@ This is something easy for a person to do.</p>
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will be tagging each review and searching through it for foods by looking for the noun tag.</p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -12323,7 +12350,9 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>  We&#39;re trying to use up the last jalapenos from our garden this year - this would be perfect!!! Yum 
@@ -12342,19 +12371,28 @@ This is something easy for a person to do.</p>
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Performing-sentiment-analysis">Performing sentiment analysis<a class="anchor-link" href="#Performing-sentiment-analysis">&#182;</a></h2>
+<p>Now that the nouns have been searched for in the database to verify they are a food item, the sentences containing them are added to a list.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Performing-sentiment-analysis">Performing sentiment analysis<a class="anchor-link" href="#Performing-sentiment-analysis">&#182;</a></h2><p><img src="http://sherimcnally.com/wp-content/uploads/2016/02/Depositphotos_39533227_m-2015-630x315.jpg" alt=""></p>
+
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.sentiment.vader</span> <span class="k">import</span> <span class="n">SentimentIntensityAnalyzer</span> <span class="k">as</span> <span class="n">sia</span>
@@ -12367,7 +12405,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">analyzer</span> <span class="o">=</span> <span class="n">sia</span><span class="p">()</span>
@@ -12385,7 +12423,7 @@ This is something easy for a person to do.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getKey</span><span class="p">(</span><span class="n">tup</span><span class="p">):</span>
@@ -12399,13 +12437,24 @@ This is something easy for a person to do.</p>
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We now have performed sentiment analysis on every sentence that we stored.</p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">scored</span><span class="p">)</span>
-<span class="n">recipe</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">scored</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sent</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sent</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12417,36 +12466,40 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39; using fresh jalapenos is great, but they taste much better if you roast them first!  Roasting really brings out the depth of flavor that you need with chicken and cheese&#39;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.764, &#39;pos&#39;: 0.236, &#39;compound&#39;: 0.8096}), (&#39; I loved the taste of fresh jalapenos and have now officially added this to my product list&#39;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.693, &#39;pos&#39;: 0.307, &#39;compound&#39;: 0.7351}), (&#34;  We&#39;re trying to use up the last jalapenos from our garden this year - this would be perfect!!! Yum &#34;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.788, &#39;pos&#39;: 0.212, &#39;compound&#39;: 0.6784}), (&#39; Yum! Loved the taste&#39;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.417, &#39;pos&#39;: 0.583, &#39;compound&#39;: 0.636}), (&#39; My family is having a party next week, I am going to need to make these! Yum&#39;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.824, &#39;pos&#39;: 0.176, &#39;compound&#39;: 0.4574}), (&#34; Like I stated, I used a ladle to form: 4 slices bacon, then one x-thinly sliced chicken breast/diced al dente veggies (broccoli, carrot, celery, onion,) slice provolone, the jalapenos, sea salt n&#39; pepper&#34;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.918, &#39;pos&#39;: 0.082, &#39;compound&#39;: 0.3612}), (&#34; I&#39;m going to add this to Yummly and try it soon&#34;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 1.0, &#39;pos&#39;: 0.0, &#39;compound&#39;: 0.0}), (&#39; My brother makes stuffed jalapenos wrapped in bacon&#39;, {&#39;neg&#39;: 0.0, &#39;neu&#39;: 1.0, &#39;pos&#39;: 0.0, &#39;compound&#39;: 0.0}), (&#39;  If it is that you cannot find fresh jalapenos, you could used pickled jalapenos&#39;, {&#39;neg&#39;: 0.131, &#39;neu&#39;: 0.869, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.2411})]
+<pre>{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.764, &#39;pos&#39;: 0.236, &#39;compound&#39;: 0.8096}
+ using fresh jalapenos is great, but they taste much better if you roast them first!  Roasting really brings out the depth of flavor that you need with chicken and cheese
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.693, &#39;pos&#39;: 0.307, &#39;compound&#39;: 0.7351}
+ I loved the taste of fresh jalapenos and have now officially added this to my product list
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.788, &#39;pos&#39;: 0.212, &#39;compound&#39;: 0.6784}
+  We&#39;re trying to use up the last jalapenos from our garden this year - this would be perfect!!! Yum 
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.417, &#39;pos&#39;: 0.583, &#39;compound&#39;: 0.636}
+ Yum! Loved the taste
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.824, &#39;pos&#39;: 0.176, &#39;compound&#39;: 0.4574}
+ My family is having a party next week, I am going to need to make these! Yum
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.918, &#39;pos&#39;: 0.082, &#39;compound&#39;: 0.3612}
+ Like I stated, I used a ladle to form: 4 slices bacon, then one x-thinly sliced chicken breast/diced al dente veggies (broccoli, carrot, celery, onion,) slice provolone, the jalapenos, sea salt n&#39; pepper
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 1.0, &#39;pos&#39;: 0.0, &#39;compound&#39;: 0.0}
+ I&#39;m going to add this to Yummly and try it soon
+
+{&#39;neg&#39;: 0.0, &#39;neu&#39;: 1.0, &#39;pos&#39;: 0.0, &#39;compound&#39;: 0.0}
+ My brother makes stuffed jalapenos wrapped in bacon
+
+{&#39;neg&#39;: 0.131, &#39;neu&#39;: 0.869, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.2411}
+  If it is that you cannot find fresh jalapenos, you could used pickled jalapenos
+
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[61]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;f2f_url&#39;: &#39;http://food2fork.com/view/35120&#39;,
- &#39;image_url&#39;: &#39;http://static.food2fork.com/Bacon2BWrapped2BJalapeno2BPopper2BStuffed2BChicken2B5002B5909939b0e65.jpg&#39;,
- &#39;ingredients&#39;: [&#39;4 small chicken breasts, pounded thin&#39;,
-  &#39;salt and pepper to taste&#39;,
-  &#39;4 jalapenos, diced&#39;,
-  &#39;4 ounces cream cheese, room temperature&#39;,
-  &#39;1 cup cheddar cheese, shredded&#39;,
-  &#39;8 slices bacon\n&#39;],
- &#39;publisher&#39;: &#39;Closet Cooking&#39;,
- &#39;publisher_url&#39;: &#39;http://closetcooking.com&#39;,
- &#39;recipe_id&#39;: &#39;35120&#39;,
- &#39;social_rank&#39;: 100.0,
- &#39;source_url&#39;: &#39;http://www.closetcooking.com/2012/11/bacon-wrapped-jalapeno-popper-stuffed.html&#39;,
- &#39;title&#39;: &#39;Bacon Wrapped Jalapeno Popper Stuffed Chicken&#39;}</pre>
-</div>
-
 </div>
 
 </div>
@@ -12455,7 +12508,7 @@ This is something easy for a person to do.</p>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -12475,7 +12528,9 @@ This is something easy for a person to do.</p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[62]:</div>
+
+<div class="prompt output_prompt">Out[21]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12489,12 +12544,22 @@ This is something easy for a person to do.</p>
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h2><p>Some possible changes going forward is that we can modify the tagger so that all the food included in our database it viewed as a noun making it easier to find those modifications. We'd also like to be able to alter the recipe's steps.</p>
+<h2 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h2><p><img src="https://i.cbc.ca/1.3237852.1442878202!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/pizza-rat.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some possible changes going forward is that we can modify the tagger so that all the food included in our database is viewed as a noun making it easier to find those modifications. We'd also like to be able to alter the recipe's steps.</p>
+<p>Using the default POS tagger from nltk limits how much we can do with the data we retrieve. A modification would need to be done so that it would recognize all food as nouns and then look for modifcations to those for more accurate suggestions.</p>
+<p>Multi word ingredients are also not checked for currently such as chili powder vs. chili.</p>
 
 </div>
 </div>
